@@ -1,0 +1,147 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 5E8F8079
+P 7600 3300
+F 0 "A?" H 7250 4250 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 8100 2200 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 7750 2250 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 7400 4350 50  0001 C CNN
+	1    7600 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4400 7500 4500
+Wire Wire Line
+	7500 4500 7600 4500
+Wire Wire Line
+	7700 4500 7700 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5E8F8291
+P 7600 4500
+F 0 "#PWR?" H 7600 4250 50  0001 C CNN
+F 1 "GND" H 7605 4327 50  0000 C CNN
+F 2 "" H 7600 4500 50  0001 C CNN
+F 3 "" H 7600 4500 50  0001 C CNN
+	1    7600 4500
+	1    0    0    -1  
+$EndComp
+Connection ~ 7600 4500
+Wire Wire Line
+	7600 4500 7700 4500
+Wire Wire Line
+	7600 4400 7600 4500
+$Comp
+L NTX2:NTX2 U?
+U 1 1 5E8F8691
+P 4450 3350
+F 0 "U?" H 4450 3350 50  0001 L BNN
+F 1 "NTX2" H 4450 3350 50  0001 L BNN
+F 2 "NTX2:NTX2" H 4450 3350 50  0001 L BNN
+F 3 "" H 4450 3350 50  0001 C CNN
+	1    4450 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8F8B74
+P 5200 4450
+F 0 "#PWR?" H 5200 4200 50  0001 C CNN
+F 1 "GND" H 5205 4277 50  0000 C CNN
+F 2 "" H 5200 4450 50  0001 C CNN
+F 3 "" H 5200 4450 50  0001 C CNN
+	1    5200 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4450 5200 4250
+Text GLabel 4800 4200 3    50   Input ~ 0
+5V
+Wire Wire Line
+	4800 4200 4800 4100
+Wire Wire Line
+	5000 4000 5000 4100
+Wire Wire Line
+	5000 4100 4800 4100
+Connection ~ 4800 4100
+Wire Wire Line
+	4800 4100 4800 4000
+$Comp
+L Device:R R?
+U 1 1 5E8F928A
+P 5750 4250
+F 0 "R?" V 5543 4250 50  0000 C CNN
+F 1 "4K7" V 5634 4250 50  0000 C CNN
+F 2 "" V 5680 4250 50  0001 C CNN
+F 3 "~" H 5750 4250 50  0001 C CNN
+	1    5750 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E8F9301
+P 5350 4250
+F 0 "R?" V 5150 4200 50  0000 C CNN
+F 1 "4K7" V 5250 4200 50  0000 C CNN
+F 2 "" V 5280 4250 50  0001 C CNN
+F 3 "~" H 5350 4250 50  0001 C CNN
+	1    5350 4250
+	0    1    1    0   
+$EndComp
+Connection ~ 5200 4250
+Wire Wire Line
+	5200 4250 5200 4000
+Wire Wire Line
+	5500 4250 5550 4250
+Wire Wire Line
+	5400 4000 5400 4100
+Wire Wire Line
+	5400 4100 5550 4100
+Wire Wire Line
+	5550 4100 5550 4250
+Connection ~ 5550 4250
+Wire Wire Line
+	5550 4250 5600 4250
+Text GLabel 6000 4250 2    50   Input ~ 0
+5V
+$Comp
+L Device:R R?
+U 1 1 5E8F953D
+P 5550 4500
+F 0 "R?" H 5620 4546 50  0000 L CNN
+F 1 "47K" H 5620 4455 50  0000 L CNN
+F 2 "" V 5480 4500 50  0001 C CNN
+F 3 "~" H 5550 4500 50  0001 C CNN
+	1    5550 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4350 5550 4250
+Wire Wire Line
+	5550 4750 5550 4650
+Wire Wire Line
+	6000 4250 5900 4250
+Text GLabel 7800 2300 1    50   Output ~ 0
+5V
+Text Label 7100 4000 2    50   ~ 0
+RADIO_PIN
+Text Label 5650 4750 0    50   ~ 0
+RADIO_PIN
+Wire Wire Line
+	5650 4750 5550 4750
+$EndSCHEMATC
