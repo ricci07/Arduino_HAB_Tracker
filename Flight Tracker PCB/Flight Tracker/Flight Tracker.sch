@@ -144,15 +144,15 @@ Wire Wire Line
 $Comp
 L NTX2:UBlox_MAX8 U2
 U 1 1 5E8FAF38
-P 6500 5450
-F 0 "U2" H 7191 5496 50  0000 L CNN
-F 1 "UBlox_MAX8" H 7191 5405 50  0000 L CNN
-F 2 "NTX2:Ublox Max 8" H 6900 6600 50  0001 C CNN
-F 3 "" H 6900 6600 50  0001 C CNN
-	1    6500 5450
+P 9125 5500
+F 0 "U2" H 9816 5546 50  0000 L CNN
+F 1 "UBlox_MAX8" H 9816 5455 50  0000 L CNN
+F 2 "NTX2:Ublox Max 8" H 9525 6650 50  0001 C CNN
+F 3 "" H 9525 6650 50  0001 C CNN
+	1    9125 5500
 	1    0    0    -1  
 $EndComp
-Text GLabel 7150 5300 2    50   Input ~ 0
+Text GLabel 9775 5350 2    50   Input ~ 0
 3V3
 Wire Wire Line
 	5600 4500 5550 4500
@@ -161,16 +161,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR02
 U 1 1 5E8FAF7A
-P 6700 6050
-F 0 "#PWR02" H 6700 5800 50  0001 C CNN
-F 1 "GND" H 6705 5877 50  0000 C CNN
-F 2 "" H 6700 6050 50  0001 C CNN
-F 3 "" H 6700 6050 50  0001 C CNN
-	1    6700 6050
+P 9325 6100
+F 0 "#PWR02" H 9325 5850 50  0001 C CNN
+F 1 "GND" H 9330 5927 50  0000 C CNN
+F 2 "" H 9325 6100 50  0001 C CNN
+F 3 "" H 9325 6100 50  0001 C CNN
+	1    9325 6100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6300 6050
-Text Notes 7050 6250 0    50   ~ 0
+NoConn ~ 8925 6100
+Text Notes 9675 6300 0    50   ~ 0
 SCL -> I2C Clock\nSDA -> I2C Data\nTP -> Time Pulse Output (NC)\nVCC -> 3V3 Supply\nGND -> GND\nNC -> NC\nTXD -> Con to MC RX\nRXD - > Con to MC TX\n
 $Comp
 L Transistor_FET:BSS138 Q1
@@ -235,7 +235,7 @@ Text GLabel 2050 1000 1    50   Input ~ 0
 Wire Wire Line
 	2050 1000 2050 1250
 Text GLabel 1250 1650 0    50   BiDi ~ 0
-SCL_3V3
+Ublox­_SCL_3V3
 Text GLabel 2350 1650 2    50   BiDi ~ 0
 SCL_5V
 $Comp
@@ -301,27 +301,19 @@ Text GLabel 2050 2000 1    50   Input ~ 0
 Wire Wire Line
 	2050 2000 2050 2250
 Text GLabel 1250 2650 0    50   BiDi ~ 0
-SDA_3V3
+Ublox_SDA_3V3
 Text GLabel 2350 2650 2    50   BiDi ~ 0
 SDA_5V
 Text GLabel 8100 3700 2    50   BiDi ~ 0
 SDA_5V
 Text GLabel 8100 3800 2    50   BiDi ~ 0
 SCL_5V
-Text GLabel 5900 5300 0    50   BiDi ~ 0
-SCL_3V3
-Text GLabel 5900 5600 0    50   BiDi ~ 0
-SDA_3V3
-Text Notes 1400 3150 0    50   ~ 0
-I2C Line Level Shifters
-Wire Notes Line
-	700  650  700  3000
-Wire Notes Line
-	2800 3000 700  3000
-Wire Notes Line
-	2800 650  700  650 
-Wire Notes Line
-	2800 650  2800 3000
+Text GLabel 8525 5350 0    50   BiDi ~ 0
+Ublox_SCL_3V3
+Text GLabel 8525 5650 0    50   BiDi ~ 0
+Ublox_SDA_3V3
+Text Notes 2200 1000 0    50   ~ 0
+Ublox SCL Shifter
 Text GLabel 7700 2300 1    50   Output ~ 0
 3V3
 $Comp
@@ -373,8 +365,8 @@ Connection ~ 7600 1900
 Text Notes 7200 1600 0    50   ~ 0
 Power Supply (6-24V)\n
 Text Notes 8500 3800 0    50   ~ 0
-Ublox Bus
-NoConn ~ 6750 4850
+I2C Bus
+NoConn ~ 9375 4900
 Wire Wire Line
 	7500 1900 7500 2300
 $Comp
@@ -470,47 +462,231 @@ Indicator LEDs
 Wire Wire Line
 	6750 2350 6750 2300
 $Comp
-L NTX2:BMP280 U?
-U 1 1 5E93A3D7
-P 4200 5400
-F 0 "U?" H 4200 5903 50  0000 C CNN
-F 1 "BMP280" H 4200 5812 50  0000 C CNN
-F 2 "NTX2:BMP280" H 3800 5875 50  0001 C CNN
-F 3 "" H 3800 5875 50  0001 C CNN
-	1    4200 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L NTX2:BH1750 U?
+L NTX2:BH1750 U3
 U 1 1 5E93BA38
-P 3200 5850
-F 0 "U?" H 3200 6315 50  0000 C CNN
-F 1 "BH1750" H 3200 6224 50  0000 C CNN
-F 2 "NTX2:BH1750" H 2500 6300 50  0001 C CNN
-F 3 "" H 2500 6300 50  0001 C CNN
-	1    3200 5850
+P 1325 6250
+F 0 "U3" H 1325 6715 50  0000 C CNN
+F 1 "BH1750" H 1325 6624 50  0000 C CNN
+F 2 "NTX2:BH1750" H 625 6700 50  0001 C CNN
+F 3 "" H 625 6700 50  0001 C CNN
+	1    1325 6250
 	1    0    0    -1  
 $EndComp
 $Comp
-L NTX2:ML8511 U?
+L NTX2:ML8511 U5
 U 1 1 5E93CEA8
-P 4875 6200
-F 0 "U?" H 4875 6615 50  0000 C CNN
-F 1 "ML8511" H 4875 6524 50  0000 C CNN
-F 2 "NTX2:ML8511" H 4125 6500 50  0001 C CNN
-F 3 "" H 4125 6500 50  0001 C CNN
-	1    4875 6200
+P 2200 6225
+F 0 "U5" H 2200 6640 50  0000 C CNN
+F 1 "ML8511" H 2200 6549 50  0000 C CNN
+F 2 "NTX2:ML8511" H 1450 6525 50  0001 C CNN
+F 3 "" H 1450 6525 50  0001 C CNN
+	1    2200 6225
 	1    0    0    -1  
 $EndComp
 $Comp
-L NTX2:MPU-9250_MS5611 U?
+L NTX2:MPU-9250_MS5611 U4
 U 1 1 5E93E221
-P 4025 6450
-F 0 "U?" H 4025 6915 50  0000 C CNN
-F 1 "MPU-9250_MS5611" H 4025 6824 50  0000 C CNN
-F 2 "NTX2:MPU9250_MS5611" H 3700 6800 50  0001 C CNN
-F 3 "" H 3700 6800 50  0001 C CNN
-	1    4025 6450
+P 1325 7075
+F 0 "U4" H 1325 7540 50  0000 C CNN
+F 1 "MPU-9250_MS5611" H 1325 7449 50  0000 C CNN
+F 2 "NTX2:MPU9250_MS5611" H 1000 7425 50  0001 C CNN
+F 3 "" H 1000 7425 50  0001 C CNN
+	1    1325 7075
 	1    0    0    -1  
 $EndComp
+$Comp
+L Transistor_FET:BSS138 Q3
+U 1 1 5E944D02
+P 1775 3600
+F 0 "Q3" V 2025 3600 50  0000 C CNN
+F 1 "BSS138" V 2116 3600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1975 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1775 3600 50  0001 L CNN
+	1    1775 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E944D09
+P 1475 3450
+F 0 "R10" H 1545 3496 50  0000 L CNN
+F 1 "10K" H 1545 3405 50  0000 L CNN
+F 2 "" V 1405 3450 50  0001 C CNN
+F 3 "~" H 1475 3450 50  0001 C CNN
+	1    1475 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E944D10
+P 2075 3450
+F 0 "R12" H 2145 3496 50  0000 L CNN
+F 1 "10K" H 2145 3405 50  0000 L CNN
+F 2 "" V 2005 3450 50  0001 C CNN
+F 3 "~" H 2075 3450 50  0001 C CNN
+	1    2075 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1575 3700 1475 3700
+Wire Wire Line
+	1475 3600 1475 3700
+Wire Wire Line
+	1975 3700 2075 3700
+Wire Wire Line
+	2075 3600 2075 3700
+Connection ~ 2075 3700
+Wire Wire Line
+	2075 3700 2375 3700
+Connection ~ 1475 3700
+Wire Wire Line
+	1275 3700 1475 3700
+Wire Wire Line
+	1475 3300 1475 3200
+Wire Wire Line
+	1775 3400 1775 3200
+Wire Wire Line
+	1775 3200 1475 3200
+Connection ~ 1475 3200
+Wire Wire Line
+	1475 3200 1475 3100
+Text GLabel 1475 3100 1    50   Input ~ 0
+3V3
+Text GLabel 2075 3050 1    50   Input ~ 0
+5V
+Wire Wire Line
+	2075 3050 2075 3300
+Text GLabel 1275 3700 0    50   BiDi ~ 0
+BMP280_SCL_3V3
+Text GLabel 2375 3700 2    50   BiDi ~ 0
+SCL_5V
+Text Notes 2200 2100 0    50   ~ 0
+Ublox SDA Shifter
+Text Notes 2250 3025 0    50   ~ 0
+BMP280 SCL Shifter
+$Comp
+L Transistor_FET:BSS138 Q4
+U 1 1 5E94C800
+P 1875 4775
+F 0 "Q4" V 2125 4775 50  0000 C CNN
+F 1 "BSS138" V 2216 4775 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2075 4700 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1875 4775 50  0001 L CNN
+	1    1875 4775
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E94C807
+P 1575 4625
+F 0 "R11" H 1645 4671 50  0000 L CNN
+F 1 "10K" H 1645 4580 50  0000 L CNN
+F 2 "" V 1505 4625 50  0001 C CNN
+F 3 "~" H 1575 4625 50  0001 C CNN
+	1    1575 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5E94C80E
+P 2175 4625
+F 0 "R13" H 2245 4671 50  0000 L CNN
+F 1 "10K" H 2245 4580 50  0000 L CNN
+F 2 "" V 2105 4625 50  0001 C CNN
+F 3 "~" H 2175 4625 50  0001 C CNN
+	1    2175 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1675 4875 1575 4875
+Wire Wire Line
+	1575 4775 1575 4875
+Wire Wire Line
+	2075 4875 2175 4875
+Wire Wire Line
+	2175 4775 2175 4875
+Connection ~ 2175 4875
+Wire Wire Line
+	2175 4875 2475 4875
+Connection ~ 1575 4875
+Wire Wire Line
+	1375 4875 1575 4875
+Wire Wire Line
+	1575 4475 1575 4375
+Wire Wire Line
+	1875 4575 1875 4375
+Wire Wire Line
+	1875 4375 1575 4375
+Connection ~ 1575 4375
+Wire Wire Line
+	1575 4375 1575 4275
+Text GLabel 1575 4275 1    50   Input ~ 0
+3V3
+Text GLabel 2175 4225 1    50   Input ~ 0
+5V
+Wire Wire Line
+	2175 4225 2175 4475
+Text GLabel 1375 4875 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text GLabel 2475 4875 2    50   BiDi ~ 0
+SDA_5V
+Text Notes 2350 4200 0    50   ~ 0
+BMP280 SDA Shifter
+Text GLabel 6175 5475 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text GLabel 6175 5475 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text GLabel 6175 5325 0    50   BiDi ~ 0
+BMP280_SCL_3V3
+Text GLabel 6575 5075 1    50   Input ~ 0
+3V3
+$Comp
+L NTX2:BMP280 U6
+U 1 1 5E93A3D7
+P 6575 5400
+F 0 "U6" H 6800 5675 50  0000 C CNN
+F 1 "BMP280" H 6325 5700 50  0000 C CNN
+F 2 "NTX2:BMP280" H 6175 5875 50  0001 C CNN
+F 3 "" H 6175 5875 50  0001 C CNN
+	1    6575 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5E96193B
+P 6575 5725
+F 0 "#PWR07" H 6575 5475 50  0001 C CNN
+F 1 "GND" H 6580 5552 50  0000 C CNN
+F 2 "" H 6575 5725 50  0001 C CNN
+F 3 "" H 6575 5725 50  0001 C CNN
+	1    6575 5725
+	1    0    0    -1  
+$EndComp
+Text Notes 5550 6250 0    50   ~ 0
+CSB -> Chip Select Pull up for I2C, pull down for SPI\nSDO -> Conn to GND gives 0x76 adress \nand conn (don't leave floating) to VCC gives 0x77 address
+Text GLabel 6975 5325 2    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR08
+U 1 1 5E962B47
+P 7025 5525
+F 0 "#PWR08" H 7025 5275 50  0001 C CNN
+F 1 "GND" H 7030 5352 50  0000 C CNN
+F 2 "" H 7025 5525 50  0001 C CNN
+F 3 "" H 7025 5525 50  0001 C CNN
+	1    7025 5525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7025 5525 7025 5475
+Wire Wire Line
+	7025 5475 6975 5475
+Wire Notes Line
+	725  5450 2750 5450
+Wire Notes Line
+	2750 5450 2750 7500
+Wire Notes Line
+	2750 7500 700  7500
+Wire Notes Line
+	700  7500 700  5475
 $EndSCHEMATC
