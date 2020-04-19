@@ -1,0 +1,39 @@
+1. What reciever did you use? 
+	- I have seen the common reciever is the Yaesu 817 these days 
+	- How would I go about aquiring such an expensive device for a one time launch?
+	- I heard you can use an inexpensive radio recieving dongle
+
+2. Do you use the Radiometrix NTX2 10mW Transmitter (£21)
+	- I believe I don't require the matching reciever if I am using a Yaesu 817, is that correct?
+
+3. The datasheet for the Radiometrix NTX2 10mW states 500m range, but I know from ukhas research this can be extended to a few hundred miles with high line of sight, but as the line of sight reduces during the landing phase, the signal may not be pickup unless within 500m (chasing the balloon). You suggested using a secondary balloon and a gateway to locate the landing location. At the time I don't know exactly what this meant, but I have seen you can use a backup cheap GSM phone in the payload to send a SMS message of the landing location to your smartphone, what are your thoughts on this and how I would go about triggering a sms message to be sent containing the GPS coordinates?
+
+4. You said something about renting helium, but I don't remember exactly what it was. Can I not just buy a large cylinder of helium? - Or does renting allow you to obtain more helium for free if you require it? - e.g pay for the cylinder, and have free refills/new full cylinders.
+
+5. Most guides I have seen use a software called dl-fldigi, is this 'the' software to use, or is there something you used instead?
+
+6. I couldn't find rocket engineering's high altitude balloons, would any purpose designed latex high-altitude balloons do?
+	- Is 600g the most common size balloon, did you use this or bigger? (I realise it depends on the payload weight)
+
+7. I read hyrdogen is cheaper, and has more lift, but can be explosive if mixed with correct amount of air. Is it best to just stick with inert helium?
+
+8. You envited us to a couple or so events, but I cannot remember what they were or when, can you reiterate what it was?
+
+9. I mentioned to Mo (The Lectuer) that I met up with you and he must have spoken with a fellow lecturer about it. That lecturer asked me to check if you would be interested in comming into the university for a talk. She didn't specify what about exactly, but possibly the projects you have worked on, including the weather balloons.
+
+10. How much helium is required? - Just enough that it wants to rise up? (Without overfilling and reducing the burst alitude)
+
+11. You said you used a thermocouple without the need for linearisation, could I use a thermistor since one I looked at has a working range of -85 deg C. I believe the peak temperature is about -55 deg in nearspace
+
+12. Can you list the types of sensor data you collected with your payload sensor board. I remember, ex temp, int temp, acceration, gyro, humidity?
+
+13. My research says x4 energiser lithium disposable batteries are the most relisient batteries to send up, are these the ones you used?
+
+14. Did you find the need for a YAGI antenna, or did you get by with just with whip antenna(s)?
+
+15. What type of lines (material wise, e.g paracord) that connects the balloon to the parachute and payload did you use?
+
+16. I think I'm going to use polysterene, as most people do, for its many positive properties for this application. Is a sterene cooler with lid enough to keep the electronics warm enough, or do I need to include extra steps to prevent frozen electronics?
+	What abou the antenna, does that need to be exposed out of the sterene cooler?
+
+17. How do I make my balloon appear on HABHUB? - is it the output of the dl-dldigi software?

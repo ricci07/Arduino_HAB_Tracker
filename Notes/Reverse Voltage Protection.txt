@@ -1,0 +1,31 @@
+There are many ways to provide voltage protection to a circuit
+
+	- Series diode after power source (Basic, not great, alot of wasted heat)
+	- Series shotkey diode after power source (Better, less heat wasted but still not the ultimate method)
+	- P-channel mosfet with Drain conected in series with the positive supply and the source connected to the load (Absolute best way)
+	
+	
+	Wasted heat calculation
+	
+		Forward Voltage x Current = Wasted Power
+		
+	How much is too much wasted heat?
+		Anything approaching 2W is on the high side.
+		A max of 1W or below is preferrable.
+		
+	Which diode?
+		P/N 1N4001 [1]
+	Which Shotkey diode?
+		P/N MBRA130  [1]
+		
+	Which P-channel Mosfet?
+		
+	
+	
+	
+	
+	
+	References
+	
+	[1] https://www.allaboutcircuits.com/technical-articles/how-to-protect-your-circuits-using-only-a-diode/
+	[2] https://www.youtube.com/watch?v=IrB-FPcv1Dc
