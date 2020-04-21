@@ -17,7 +17,7 @@ F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=512-FQP47P06" 450 -750 50 
 F10 "6715127P" 450 -850 50 H I L CNN "RS Part Number"
 F11 "http://uk.rs-online.com/web/p/products/6715127P" 450 -950 50 H I L CNN "RS Price/Stock"
 DRAW
-C 250 100 150 0 1 10 N
+C 250 100 150 0 1 10 f
 P 2 0 1 6 230 -20 230 20 N
 P 2 0 1 6 230 0 300 0 N
 P 2 0 1 6 230 80 230 120 N
