@@ -1,0 +1,18 @@
+!!!Please refer to the excel document instead of this - 23.04.20!!!
+
+reference:https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins
+====================================================================================
+Arduino 3.3V regulator Max Current = 150mA 
+(also depends on current on 5V rail as they are connected)
+Arduino GPIO max current = 40mA (<35mA preffered) (never approach 40mA!!)
+Arduino total all GPIO currents = 200mA
+Arduino 5V max current: 400mA USB, 900mA at 7V External Power (max current reduce with increase in voltage at VIN)
+
+NTX2B Current Draw on 5V pin = 17.6mA
+GPS idle current draw on 3.3V pin = 40mA
+Buzzer Steady_HIGH current draw = 19mA
+WARN_LED stead_HIGH current draw = 16.5mA
+OK_LED steady_HIGH current draw = 15.2mA
+
+
+
