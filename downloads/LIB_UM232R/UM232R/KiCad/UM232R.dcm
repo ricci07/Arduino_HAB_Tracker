@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP UM232R
+D UM232R USB - Serial UART Development Module
+K
+F http://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_UM232R.pdf
+$ENDCMP
+#
+#End Doc Library

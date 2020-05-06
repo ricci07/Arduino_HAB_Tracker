@@ -7,6 +7,7 @@
 #include <Adafruit_Sensor.h> //adafruit unified sensor lib
 #include <Adafruit_BMP280.h> //bmp280 lib
 #include <BH1750.h> //light sensor lib
+#include <EEPROM.h>
 
 //RTTY @ 370Hz shift
 const uint16_t RTTY_BAUD = 50; //change this to either 50 or 300 [[[rem dlfldigi too]]]
@@ -96,6 +97,8 @@ uint8_t bleepLowBattery = 1;
 //=======================================================================================
 
 void(* resetFunc) (void) = 0;
+int EEPROM_ADDRESS = 0; //poweroff memory address used for
+int EEPROM_VALUE;
 
 char datastring[80]; //buffer for rtty sentence
 
@@ -298,8 +301,24 @@ void loop() {
     //it is normal not get data sometimes inbetween serial checks, but not several times in a row.
    digitalWrite(GPS_LOCK_LED, LOW);
   }else if (No_GPS_Available_Count == NO_GPS_Data_Reset_Thresh){
-    mySerial.println("Resetting Arduino!!");
-    resetFunc();
+    
+    EEPROM_VALUE = EEPROM.read(EEPROM_ADDRESS);
+    //READ/WRITE EEPROM sticky variables
+    if (EEPROM_VALUE != 0){
+      EEPROM.write(EEPROM_ADDRESS, 1);
+      //mySerial.println(EEPROM_VALUE);
+        if (EEPROM_VALUE == 255)
+          EEPROM_VALUE=0; //prevent overflow
+          
+      //write byte to eeprom to signfy we resetted arduino
+      //++addr &= EEPROM.length() - 1; //increment address without overflow
+      mySerial.println("Resetting Arduino!!");
+      resetFunc();
+    }else{
+      mySerial.println("Already resetted!");
+      No_GPS_Available_Count = 0; //prevents TYPE overlow (255 max)
+    }
+    
   }else{
     digitalWrite(GPS_LOCK_LED, HIGH);
   }
@@ -563,7 +582,7 @@ void rtty_txbit (int tbit){
   }else if(RTTY_BAUD == 300){ 
     delayMicroseconds(3370); // 300 baud
   }else{
-      mySerial.print ("INVALID BAUD RTTY BAUD RATE!!! USE 50 or 300");
+    mySerial.print ("INVALID BAUD RTTY BAUD RATE! USE 50 or 300");
     delayMicroseconds(3370); // 300 baud
   }
 

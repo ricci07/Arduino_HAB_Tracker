@@ -1,0 +1,9 @@
+Manufacturer=FTDI Chip
+PartNumber=UM232R
+PartCategory=Undefined or Miscellaneous
+PackageCategory=Other
+PinCount=24
+Version=1.2
+Released=2017-07-25 13:07:03
+Downloaded=2020-05-05 21:12:48
+3D=N

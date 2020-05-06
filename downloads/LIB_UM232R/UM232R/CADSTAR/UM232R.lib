@@ -1,0 +1,19 @@
+.UM232R :1 ;UM232R USB - Serial UART Development Module
+UM232R_1
+*STM U
+*NGS
+*PLB 1="TXD" 2="DTR#" 3="RTS#" 4="VIO" 5="RXD" 6="RI#" 7="GND_1" 8="DSR#" 9="DCD#" 10="CTS#" 11="CB4" 12="CB2" 13="SLD" 14="USB" 15="VCC_1" 16="PU2" 17="PU1" 18="CB3" 19="3V3" 20="RST" 21="VCC_2" 22="CB1" 23="CB0" 24="GND_2"
+*MXP 24
+*DFN UM232R
+~!Manufacturer_Name (FTDI Chip)
+~!Manufacturer_Part_Number (UM232R)
+~!Mouser Part Number (895-UM232R)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=895-UM232R)
+~!RS Part Number (0406568)
+~!Link RS Price/Stock (http://china.rs-online.com/web/p/products/0406568)
+~!Allied_Number (70069412)
+~!Link Allied Price/Stock (https://www.alliedelec.com/ftdi-um232r/70069412/)
+~!Link Datasheet (http://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_UM232R.pdf)
+~!Height (-)
+UM232R
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 21.1!U 22.1!U 23.1!U 24.1!U 
