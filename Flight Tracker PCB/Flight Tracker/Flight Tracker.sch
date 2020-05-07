@@ -555,7 +555,7 @@ Connection ~ 4725 8200
 Entry Wire Line
 	5750 7075 5850 7175
 Wire Wire Line
-	5750 7075 4750 7075
+	5750 7075 5725 7075
 Connection ~ 4750 7075
 Entry Wire Line
 	5800 6000 5900 6100
@@ -890,8 +890,6 @@ Wire Wire Line
 Wire Wire Line
 	4775 6000 5600 6000
 Connection ~ 5600 6000
-Wire Wire Line
-	5600 6000 5800 6000
 Wire Wire Line
 	5575 4625 5575 4825
 Connection ~ 5575 4825
@@ -1601,23 +1599,31 @@ U 1 1 5ED757C5
 P 5425 6700
 F 0 "J5" H 5425 6500 50  0000 C CNN
 F 1 "Conn_01x02" H 5425 6825 50  0000 C CNN
-F 2 "" H 5425 6700 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 5425 6700 50  0001 C CNN
 F 3 "~" H 5425 6700 50  0001 C CNN
 	1    5425 6700
 	-1   0    0    1   
 $EndComp
-Entry Wire Line
-	5750 6700 5850 6800
-Entry Wire Line
-	5800 6600 5900 6700
+Text Notes 5950 6775 0    50   ~ 0
+Tap into \nI2C lines\n(no pullups)
 Wire Wire Line
-	5800 6600 5625 6600
+	5625 6600 5725 6600
 Wire Wire Line
-	5750 6700 5625 6700
+	5625 6700 5725 6700
+Wire Wire Line
+	5725 6700 5725 7075
+Connection ~ 5725 7075
+Wire Wire Line
+	5725 7075 4750 7075
+Wire Wire Line
+	5725 6600 5725 6000
+Wire Wire Line
+	5600 6000 5725 6000
+Connection ~ 5725 6000
+Wire Wire Line
+	5725 6000 5800 6000
 Wire Bus Line
 	5900 4550 5900 10675
 Wire Bus Line
 	5850 4550 5850 10675
-Text Notes 5950 6775 0    50   ~ 0
-Tap into \nI2C lines\n(no pullups)
 $EndSCHEMATC

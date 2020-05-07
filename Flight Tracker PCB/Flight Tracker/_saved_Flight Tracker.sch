@@ -948,7 +948,7 @@ U 1 1 5E8F8079
 P 10850 4625
 F 0 "A1" H 10500 5575 50  0000 C CNN
 F 1 "Arduino_UNO_R3" H 11350 3525 50  0000 C CNN
-F 2 "Module:Arduino_UNO_R3" H 11000 3575 50  0001 L CNN
+F 2 "NTX2:Arduino_UNO_R3_(Headers_Version)" H 11000 3575 50  0001 L CNN
 F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 10650 5675 50  0001 C CNN
 	1    10850 4625
 	1    0    0    -1  

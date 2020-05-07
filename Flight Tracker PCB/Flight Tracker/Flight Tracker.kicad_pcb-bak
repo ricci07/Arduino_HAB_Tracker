@@ -2078,7 +2078,7 @@
   )
 
   (module "NTX2:Ublox Max 8" (layer F.Cu) (tedit 5E912C92) (tstamp 5EDA46D8)
-    (at 140.1 108.25 270)
+    (at 140.15 109.7 270)
     (path /5E8FAF38)
     (fp_text reference U2 (at -8.9 -13.8 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
