@@ -1,0 +1,12 @@
+https://grabcad.com/library/arduino-nano--1
+
+Alignment:
+
+==Rotation==
+X:-90
+Y:0
+Z:90
+==Offset==
+X:0
+Y:-0.0300
+Z:2.4

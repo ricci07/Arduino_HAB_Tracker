@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP FQP47P06
+D Trans MOSFET P-CH 60V 47A 3-Pin TO-220
+K
+F https://www.onsemi.com/pub/Collateral/FQP47P06-D.pdf
+$ENDCMP
+#
+#End Doc Library

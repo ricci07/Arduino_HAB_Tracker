@@ -1,0 +1,1603 @@
+EESchema Schematic File Version 4
+LIBS:Flight Tracker-cache
+EELAYER 26 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp "RG"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	10750 5725 10750 5825
+Wire Wire Line
+	10750 5825 10850 5825
+Wire Wire Line
+	10950 5825 10950 5725
+$Comp
+L power:GND #PWR03
+U 1 1 5E8F8291
+P 10850 5825
+F 0 "#PWR03" H 10850 5575 50  0001 C CNN
+F 1 "GND" H 10855 5652 50  0000 C CNN
+F 2 "" H 10850 5825 50  0001 C CNN
+F 3 "" H 10850 5825 50  0001 C CNN
+	1    10850 5825
+	1    0    0    -1  
+$EndComp
+Connection ~ 10850 5825
+Wire Wire Line
+	10850 5825 10950 5825
+Wire Wire Line
+	10850 5725 10850 5825
+$Comp
+L power:GND #PWR01
+U 1 1 5E8F8B74
+P 8775 5750
+F 0 "#PWR01" H 8775 5500 50  0001 C CNN
+F 1 "GND" H 8780 5577 50  0000 C CNN
+F 2 "" H 8775 5750 50  0001 C CNN
+F 3 "" H 8775 5750 50  0001 C CNN
+	1    8775 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8775 5750 8775 5550
+$Comp
+L Device:R R6
+U 1 1 5E8F928A
+P 9325 5550
+F 0 "R6" V 9175 5550 50  0000 C CNN
+F 1 "4K7" V 9250 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9255 5550 50  0001 C CNN
+F 3 "~" H 9325 5550 50  0001 C CNN
+	1    9325 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E8F9301
+P 8925 5550
+F 0 "R5" V 8775 5550 50  0000 C CNN
+F 1 "4K7" V 8850 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8855 5550 50  0001 C CNN
+F 3 "~" H 8925 5550 50  0001 C CNN
+	1    8925 5550
+	0    1    1    0   
+$EndComp
+Connection ~ 8775 5550
+Wire Wire Line
+	8775 5550 8775 5300
+Wire Wire Line
+	9075 5550 9125 5550
+Wire Wire Line
+	8975 5300 8975 5400
+Wire Wire Line
+	8975 5400 9125 5400
+Wire Wire Line
+	9125 5400 9125 5550
+Connection ~ 9125 5550
+Wire Wire Line
+	9125 5550 9175 5550
+Text GLabel 11050 3625 1    50   Output ~ 0
+5V
+$Comp
+L NTX2:UBlox_MAX8 U2
+U 1 1 5E8FAF38
+P 11450 7500
+F 0 "U2" H 12141 7546 50  0000 L CNN
+F 1 "UBlox_MAX8" H 12141 7455 50  0000 L CNN
+F 2 "NTX2:Ublox Max 8" H 11850 8650 50  0001 C CNN
+F 3 "" H 11850 8650 50  0001 C CNN
+	1    11450 7500
+	1    0    0    -1  
+$EndComp
+Text GLabel 12100 7350 2    50   Input ~ 0
+3V3
+Wire Wire Line
+	9175 5800 9125 5800
+Wire Wire Line
+	9125 5550 9125 5800
+$Comp
+L power:GND #PWR02
+U 1 1 5E8FAF7A
+P 11650 8100
+F 0 "#PWR02" H 11650 7850 50  0001 C CNN
+F 1 "GND" H 11655 7927 50  0000 C CNN
+F 2 "" H 11650 8100 50  0001 C CNN
+F 3 "" H 11650 8100 50  0001 C CNN
+	1    11650 8100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11250 8100
+Text Notes 11100 9050 0    50   ~ 0
+SCL -> I2C Clock (Unused, only for I2C interface)\nSDA -> I2C Data (Unused, only for I2C interface)\nTP -> Time Pulse Output (NC)\nVCC -> 3V3 Supply\nGND -> GND\nNC -> NC\nTXD -> Con to MC RX\nRXD - > Con to MC TX\n
+Text GLabel 10950 3625 1    50   Output ~ 0
+3V3
+Text Notes 10425 1800 0    50   ~ 0
+Power Supply (6-24V)\n
+NoConn ~ 11700 6900
+$Comp
+L Device:R R8
+U 1 1 5E9136AC
+P 9600 3950
+F 0 "R8" H 9625 4100 50  0000 L CNN
+F 1 "150R" V 9500 3850 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9530 3950 50  0001 C CNN
+F 3 "~" H 9600 3950 50  0001 C CNN
+	1    9600 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E9172FA
+P 9975 3550
+F 0 "#PWR05" H 9975 3300 50  0001 C CNN
+F 1 "GND" H 10075 3450 50  0000 C CNN
+F 2 "" H 9975 3550 50  0001 C CNN
+F 3 "" H 9975 3550 50  0001 C CNN
+	1    9975 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E918860
+P 9825 3950
+F 0 "R9" H 9850 4100 50  0000 L CNN
+F 1 "150R" V 9725 3850 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9755 3950 50  0001 C CNN
+F 3 "~" H 9825 3950 50  0001 C CNN
+	1    9825 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5E91A9EF
+P 9825 3600
+F 0 "D2" V 9725 3600 50  0000 L CNN
+F 1 "WARN_LED" V 9950 3550 50  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9825 3600 50  0001 C CNN
+F 3 "~" H 9825 3600 50  0001 C CNN
+	1    9825 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9825 3400 9825 3450
+$Comp
+L power:GND #PWR04
+U 1 1 5E922529
+P 9450 3550
+F 0 "#PWR04" H 9450 3300 50  0001 C CNN
+F 1 "GND" H 9350 3450 50  0000 C CNN
+F 2 "" H 9450 3550 50  0001 C CNN
+F 3 "" H 9450 3550 50  0001 C CNN
+	1    9450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3450 9600 3400
+Wire Wire Line
+	9600 3400 9450 3400
+Wire Wire Line
+	9450 3400 9450 3550
+$Comp
+L Device:LED D1
+U 1 1 5E9216E1
+P 9600 3600
+F 0 "D1" V 9500 3600 50  0000 L CNN
+F 1 "OK_LED" V 9725 3300 50  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9600 3600 50  0001 C CNN
+F 3 "~" H 9600 3600 50  0001 C CNN
+	1    9600 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9975 3550 9975 3400
+Wire Wire Line
+	9975 3400 9825 3400
+Text Notes 9450 3375 0    50   ~ 0
+Indicator LEDs
+Wire Wire Line
+	9600 3800 9600 3750
+$Comp
+L NTX2:BH1750 U3
+U 1 1 5E93BA38
+P 6900 8275
+F 0 "U3" H 6900 8740 50  0000 C CNN
+F 1 "BH1750" H 6900 8649 50  0000 C CNN
+F 2 "NTX2:BH1750" H 6200 8725 50  0001 C CNN
+F 3 "" H 6200 8725 50  0001 C CNN
+	1    6900 8275
+	1    0    0    -1  
+$EndComp
+$Comp
+L NTX2:ML8511 U5
+U 1 1 5E93CEA8
+P 6875 6825
+F 0 "U5" H 6875 7240 50  0000 C CNN
+F 1 "ML8511" H 6875 7149 50  0000 C CNN
+F 2 "NTX2:ML8511" H 6125 7125 50  0001 C CNN
+F 3 "" H 6125 7125 50  0001 C CNN
+	1    6875 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q3
+U 1 1 5E944D02
+P 4375 4725
+F 0 "Q3" V 4625 4725 50  0000 C CNN
+F 1 "BSS138" V 4716 4725 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4575 4650 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4375 4725 50  0001 L CNN
+	1    4375 4725
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E944D09
+P 4075 4575
+F 0 "R10" H 4145 4621 50  0000 L CNN
+F 1 "10K" H 4145 4530 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4005 4575 50  0001 C CNN
+F 3 "~" H 4075 4575 50  0001 C CNN
+	1    4075 4575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E944D10
+P 4675 4575
+F 0 "R12" H 4745 4621 50  0000 L CNN
+F 1 "10K" H 4745 4530 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4605 4575 50  0001 C CNN
+F 3 "~" H 4675 4575 50  0001 C CNN
+	1    4675 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 4825 4075 4825
+Wire Wire Line
+	4075 4725 4075 4825
+Wire Wire Line
+	4575 4825 4675 4825
+Wire Wire Line
+	4675 4725 4675 4825
+Connection ~ 4675 4825
+Connection ~ 4075 4825
+Wire Wire Line
+	3875 4825 4075 4825
+Wire Wire Line
+	4075 4425 4075 4325
+Wire Wire Line
+	4375 4525 4375 4325
+Wire Wire Line
+	4375 4325 4075 4325
+Connection ~ 4075 4325
+Wire Wire Line
+	4075 4325 4075 4225
+Text GLabel 4075 4225 1    50   Input ~ 0
+3V3
+Text GLabel 4675 4175 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4675 4175 4675 4425
+Text GLabel 3875 4825 0    50   BiDi ~ 0
+BMP280_SCL_3V3
+Text Notes 4850 4150 0    50   ~ 0
+BMP280 SCL Shifter
+$Comp
+L Transistor_FET:BSS138 Q4
+U 1 1 5E94C800
+P 4475 5900
+F 0 "Q4" V 4725 5900 50  0000 C CNN
+F 1 "BSS138" V 4816 5900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4675 5825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4475 5900 50  0001 L CNN
+	1    4475 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E94C807
+P 4175 5750
+F 0 "R11" H 4245 5796 50  0000 L CNN
+F 1 "10K" H 4245 5705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4105 5750 50  0001 C CNN
+F 3 "~" H 4175 5750 50  0001 C CNN
+	1    4175 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5E94C80E
+P 4775 5750
+F 0 "R13" H 4845 5796 50  0000 L CNN
+F 1 "10K" H 4845 5705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4705 5750 50  0001 C CNN
+F 3 "~" H 4775 5750 50  0001 C CNN
+	1    4775 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 6000 4175 6000
+Wire Wire Line
+	4175 5900 4175 6000
+Wire Wire Line
+	4675 6000 4775 6000
+Wire Wire Line
+	4775 5900 4775 6000
+Connection ~ 4775 6000
+Connection ~ 4175 6000
+Wire Wire Line
+	3975 6000 4175 6000
+Wire Wire Line
+	4175 5600 4175 5500
+Wire Wire Line
+	4475 5700 4475 5500
+Wire Wire Line
+	4475 5500 4175 5500
+Connection ~ 4175 5500
+Wire Wire Line
+	4175 5500 4175 5400
+Text GLabel 4175 5400 1    50   Input ~ 0
+3V3
+Text GLabel 4775 5350 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4775 5350 4775 5600
+Text GLabel 3975 6000 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text Notes 4950 5325 0    50   ~ 0
+BMP280 SDA Shifter
+Text GLabel 8925 6825 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text GLabel 8925 6825 0    50   BiDi ~ 0
+BMP280_SDA_3V3
+Text GLabel 8925 6675 0    50   BiDi ~ 0
+BMP280_SCL_3V3
+$Comp
+L NTX2:BMP280 U6
+U 1 1 5E93A3D7
+P 9325 6750
+F 0 "U6" H 9550 7025 50  0000 C CNN
+F 1 "BMP280" H 9075 7050 50  0000 C CNN
+F 2 "NTX2:BMP280" H 8925 7225 50  0001 C CNN
+F 3 "" H 8925 7225 50  0001 C CNN
+	1    9325 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5E96193B
+P 9325 7075
+F 0 "#PWR07" H 9325 6825 50  0001 C CNN
+F 1 "GND" H 9330 6902 50  0000 C CNN
+F 2 "" H 9325 7075 50  0001 C CNN
+F 3 "" H 9325 7075 50  0001 C CNN
+	1    9325 7075
+	1    0    0    -1  
+$EndComp
+Text Notes 8075 7625 0    50   ~ 0
+CSB -> Chip Select Pull up for I2C, pull down for SPI\nSDO -> Conn to GND gives 0x76 adress \nand conn (don't leave floating) to VCC gives 0x77 address
+Text GLabel 9725 6675 2    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR08
+U 1 1 5E962B47
+P 9775 6875
+F 0 "#PWR08" H 9775 6625 50  0001 C CNN
+F 1 "GND" H 9780 6702 50  0000 C CNN
+F 2 "" H 9775 6875 50  0001 C CNN
+F 3 "" H 9775 6875 50  0001 C CNN
+	1    9775 6875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9775 6875 9775 6825
+Wire Wire Line
+	9775 6825 9725 6825
+NoConn ~ 11350 5325
+NoConn ~ 11350 5425
+Text GLabel 6550 8125 0    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR09
+U 1 1 5E9744BD
+P 6475 8425
+F 0 "#PWR09" H 6475 8175 50  0001 C CNN
+F 1 "GND" H 6480 8252 50  0000 C CNN
+F 2 "" H 6475 8425 50  0001 C CNN
+F 3 "" H 6475 8425 50  0001 C CNN
+	1    6475 8425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 8375 6475 8375
+Wire Wire Line
+	6475 8375 6475 8425
+$Comp
+L Transistor_FET:BSS138 Q6
+U 1 1 5E978525
+P 4450 6975
+F 0 "Q6" V 4700 6975 50  0000 C CNN
+F 1 "BSS138" V 4791 6975 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 6900 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4450 6975 50  0001 L CNN
+	1    4450 6975
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5E97852C
+P 4150 6825
+F 0 "R15" H 4220 6871 50  0000 L CNN
+F 1 "10K" H 4220 6780 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4080 6825 50  0001 C CNN
+F 3 "~" H 4150 6825 50  0001 C CNN
+	1    4150 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5E978533
+P 4750 6825
+F 0 "R17" H 4820 6871 50  0000 L CNN
+F 1 "10K" H 4820 6780 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4680 6825 50  0001 C CNN
+F 3 "~" H 4750 6825 50  0001 C CNN
+	1    4750 6825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 7075 4150 7075
+Wire Wire Line
+	4150 6975 4150 7075
+Wire Wire Line
+	4650 7075 4750 7075
+Wire Wire Line
+	4750 6975 4750 7075
+Connection ~ 4150 7075
+Wire Wire Line
+	3950 7075 4150 7075
+Wire Wire Line
+	4150 6675 4150 6575
+Wire Wire Line
+	4450 6775 4450 6575
+Wire Wire Line
+	4450 6575 4150 6575
+Connection ~ 4150 6575
+Wire Wire Line
+	4150 6575 4150 6475
+Text GLabel 4150 6475 1    50   Input ~ 0
+3V3
+Text GLabel 4750 6425 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4750 6425 4750 6675
+Text GLabel 3950 7075 0    50   BiDi ~ 0
+BH1750_SCL_3V3
+Text Notes 4925 6400 0    50   ~ 0
+BH1750 SCL Shifter
+$Comp
+L Transistor_FET:BSS138 Q5
+U 1 1 5E97AE47
+P 4425 8100
+F 0 "Q5" V 4675 8100 50  0000 C CNN
+F 1 "BSS138" V 4766 8100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4625 8025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4425 8100 50  0001 L CNN
+	1    4425 8100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5E97AE4E
+P 4125 7950
+F 0 "R14" H 4195 7996 50  0000 L CNN
+F 1 "10K" H 4195 7905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4055 7950 50  0001 C CNN
+F 3 "~" H 4125 7950 50  0001 C CNN
+	1    4125 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5E97AE55
+P 4725 7950
+F 0 "R16" H 4795 7996 50  0000 L CNN
+F 1 "10K" H 4795 7905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4655 7950 50  0001 C CNN
+F 3 "~" H 4725 7950 50  0001 C CNN
+	1    4725 7950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4225 8200 4125 8200
+Wire Wire Line
+	4125 8100 4125 8200
+Wire Wire Line
+	4625 8200 4725 8200
+Wire Wire Line
+	4725 8100 4725 8200
+Connection ~ 4125 8200
+Wire Wire Line
+	3925 8200 4125 8200
+Wire Wire Line
+	4125 7800 4125 7700
+Wire Wire Line
+	4425 7900 4425 7700
+Wire Wire Line
+	4425 7700 4125 7700
+Connection ~ 4125 7700
+Wire Wire Line
+	4125 7700 4125 7600
+Text GLabel 4125 7600 1    50   Input ~ 0
+3V3
+Text GLabel 4725 7550 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4725 7550 4725 7800
+Text GLabel 3925 8200 0    50   BiDi ~ 0
+BH1750_SDA_3V3
+Text Notes 4900 7525 0    50   ~ 0
+BH1750 SDA Shifter
+Entry Wire Line
+	5800 8200 5900 8300
+Wire Wire Line
+	5800 8200 4725 8200
+Connection ~ 4725 8200
+Entry Wire Line
+	5750 7075 5850 7175
+Wire Wire Line
+	5750 7075 5725 7075
+Connection ~ 4750 7075
+Entry Wire Line
+	5800 6000 5900 6100
+Text GLabel 7250 8125 2    50   BiDi ~ 0
+BH1750_SCL_3V3
+Text GLabel 7250 8375 2    50   BiDi ~ 0
+BH1750_SDA_3V3
+Text Notes 6325 9025 0    50   ~ 0
+ADDR -> Conn to GND for 0x23 addr \nor conn to Vcc (3v3) for 0x5C
+Wire Wire Line
+	8375 5400 8375 5500
+Wire Wire Line
+	8375 5300 8375 5400
+Connection ~ 8375 5400
+Wire Wire Line
+	8575 5400 8375 5400
+Wire Wire Line
+	8575 5300 8575 5400
+Text Notes 6700 8275 0    50   ~ 0
+Light Sens
+Text Notes 6725 6850 0    50   ~ 0
+UV Sens
+Text GLabel 9325 6425 1    50   Input ~ 0
+3V3
+Text GLabel 6525 6925 0    50   Input ~ 0
+3V3
+NoConn ~ 6525 6725
+Text GLabel 7225 6925 2    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR010
+U 1 1 5EA8210C
+P 6875 7175
+F 0 "#PWR010" H 6875 6925 50  0001 C CNN
+F 1 "GND" H 6880 7002 50  0000 C CNN
+F 2 "" H 6875 7175 50  0001 C CNN
+F 3 "" H 6875 7175 50  0001 C CNN
+	1    6875 7175
+	1    0    0    -1  
+$EndComp
+Text Notes 6575 7500 0    50   ~ 0
+VIN is not used
+Text Label 7225 6725 0    50   ~ 0
+UV_OUT
+Text Label 11350 4725 0    50   ~ 0
+UV_OUT
+$Comp
+L power:GND #PWR011
+U 1 1 5EA86519
+P 6900 8625
+F 0 "#PWR011" H 6900 8375 50  0001 C CNN
+F 1 "GND" H 6905 8452 50  0000 C CNN
+F 2 "" H 6900 8625 50  0001 C CNN
+F 3 "" H 6900 8625 50  0001 C CNN
+	1    6900 8625
+	1    0    0    -1  
+$EndComp
+Text GLabel 8875 8050 0    50   Input ~ 0
+5V
+$Comp
+L power:GND #PWR012
+U 1 1 5EA968B2
+P 8875 8150
+F 0 "#PWR012" H 8875 7900 50  0001 C CNN
+F 1 "GND" V 8880 8022 50  0000 R CNN
+F 2 "" H 8875 8150 50  0001 C CNN
+F 3 "" H 8875 8150 50  0001 C CNN
+	1    8875 8150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5EAB3B53
+P 10025 8075
+F 0 "#PWR013" H 10025 7825 50  0001 C CNN
+F 1 "GND" H 10030 7902 50  0000 C CNN
+F 2 "" H 10025 8075 50  0001 C CNN
+F 3 "" H 10025 8075 50  0001 C CNN
+	1    10025 8075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10025 8075 10025 8050
+Wire Wire Line
+	10025 8050 9775 8050
+Text Notes 8100 9400 0    50   ~ 0
+VCC -> 5V bcse there is 3.3V reg on breakout board\nGND -> GND\nSCL -> I2C Clock\nSDA -> I2C Data\nEDA -> External\nECL -> External Clock\nADO -> Select I2C Address (conn to 5V for 0x69, GND for 0x68)\nINT -> Interrupt\nNCS -> SPI Chip Select\nFYNC -> Unused, conn to GND
+NoConn ~ 8875 8450
+NoConn ~ 9775 8450
+NoConn ~ 9775 8350
+NoConn ~ 9775 8250
+NoConn ~ 9775 8150
+$Comp
+L Transistor_FET:BSS138 Q8
+U 1 1 5EADBBAB
+P 4450 9300
+F 0 "Q8" V 4700 9300 50  0000 C CNN
+F 1 "BSS138" V 4791 9300 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 9225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4450 9300 50  0001 L CNN
+	1    4450 9300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5EADBBB2
+P 4150 9150
+F 0 "R19" H 4220 9196 50  0000 L CNN
+F 1 "10K" H 4220 9105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4080 9150 50  0001 C CNN
+F 3 "~" H 4150 9150 50  0001 C CNN
+	1    4150 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 5EADBBB9
+P 4750 9150
+F 0 "R21" H 4820 9196 50  0000 L CNN
+F 1 "10K" H 4820 9105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4680 9150 50  0001 C CNN
+F 3 "~" H 4750 9150 50  0001 C CNN
+	1    4750 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 9400 4150 9400
+Wire Wire Line
+	4150 9300 4150 9400
+Wire Wire Line
+	4650 9400 4750 9400
+Wire Wire Line
+	4750 9300 4750 9400
+Connection ~ 4150 9400
+Wire Wire Line
+	3950 9400 4150 9400
+Wire Wire Line
+	4150 9000 4150 8900
+Wire Wire Line
+	4450 9100 4450 8900
+Wire Wire Line
+	4450 8900 4150 8900
+Connection ~ 4150 8900
+Wire Wire Line
+	4150 8900 4150 8800
+Text GLabel 4150 8800 1    50   Input ~ 0
+3V3
+Text GLabel 4750 8750 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4750 8750 4750 9000
+Text GLabel 3950 9400 0    50   BiDi ~ 0
+MPU9250_SCL_3V3
+Text Notes 4925 8725 0    50   ~ 0
+MPU9250 SCL Shifter
+$Comp
+L Transistor_FET:BSS138 Q7
+U 1 1 5EADBBD0
+P 4425 10425
+F 0 "Q7" V 4675 10425 50  0000 C CNN
+F 1 "BSS138" V 4766 10425 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4625 10350 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4425 10425 50  0001 L CNN
+	1    4425 10425
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 5EADBBD7
+P 4125 10275
+F 0 "R18" H 4195 10321 50  0000 L CNN
+F 1 "10K" H 4195 10230 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4055 10275 50  0001 C CNN
+F 3 "~" H 4125 10275 50  0001 C CNN
+	1    4125 10275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5EADBBDE
+P 4725 10275
+F 0 "R20" H 4795 10321 50  0000 L CNN
+F 1 "10K" H 4795 10230 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4655 10275 50  0001 C CNN
+F 3 "~" H 4725 10275 50  0001 C CNN
+	1    4725 10275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4225 10525 4125 10525
+Wire Wire Line
+	4125 10425 4125 10525
+Wire Wire Line
+	4625 10525 4725 10525
+Wire Wire Line
+	4725 10425 4725 10525
+Connection ~ 4125 10525
+Wire Wire Line
+	3925 10525 4125 10525
+Wire Wire Line
+	4125 10125 4125 10025
+Wire Wire Line
+	4425 10225 4425 10025
+Wire Wire Line
+	4425 10025 4125 10025
+Connection ~ 4125 10025
+Wire Wire Line
+	4125 10025 4125 9925
+Text GLabel 4125 9925 1    50   Input ~ 0
+3V3
+Text GLabel 4725 9875 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4725 9875 4725 10125
+Text GLabel 3925 10525 0    50   BiDi ~ 0
+MPU9250_SDA_3V3
+Text Notes 4900 9850 0    50   ~ 0
+MPU9250 SDA Shifter
+Wire Wire Line
+	5800 10525 4725 10525
+Connection ~ 4725 10525
+Wire Wire Line
+	5750 9400 4750 9400
+Connection ~ 4750 9400
+Text Notes 5725 10775 0    50   ~ 0
+SCL SDA
+Entry Wire Line
+	5750 9400 5850 9500
+Entry Wire Line
+	5800 10525 5900 10625
+Text GLabel 8875 8250 0    50   BiDi ~ 0
+MPU9250_SCL_3V3
+$Comp
+L NTX2:MPU_9250 U4
+U 1 1 5EA92A1E
+P 9325 8250
+F 0 "U4" H 9325 8715 50  0000 C CNN
+F 1 "MPU_9250" H 9325 8624 50  0000 C CNN
+F 2 "NTX2:MPU_9250" H 8875 8550 50  0001 C CNN
+F 3 "" H 8875 8550 50  0001 C CNN
+	1    9325 8250
+	1    0    0    -1  
+$EndComp
+Text GLabel 8875 8250 0    50   BiDi ~ 0
+MPU9250_SCL_3V3
+Text GLabel 8875 8350 0    50   BiDi ~ 0
+MPU9250_SDA_3V3
+$Comp
+L Device:R R22
+U 1 1 5EB1634F
+P 7000 9550
+F 0 "R22" H 6930 9504 50  0000 R CNN
+F 1 "30K" H 6930 9595 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6930 9550 50  0001 C CNN
+F 3 "~" H 7000 9550 50  0001 C CNN
+	1    7000 9550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 5EB16434
+P 7000 9975
+F 0 "R23" H 7070 10021 50  0000 L CNN
+F 1 "7.5K" H 7070 9930 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6930 9975 50  0001 C CNN
+F 3 "~" H 7000 9975 50  0001 C CNN
+	1    7000 9975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 9700 7000 9775
+$Comp
+L power:GND #PWR014
+U 1 1 5EB21381
+P 7000 10225
+F 0 "#PWR014" H 7000 9975 50  0001 C CNN
+F 1 "GND" H 7005 10052 50  0000 C CNN
+F 2 "" H 7000 10225 50  0001 C CNN
+F 3 "" H 7000 10225 50  0001 C CNN
+	1    7000 10225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 10125 7000 10225
+Text Label 7125 9775 0    50   ~ 0
+V_S_O
+Connection ~ 7000 9775
+Wire Wire Line
+	7000 9775 7000 9825
+Wire Wire Line
+	7000 9775 7125 9775
+Text Label 11350 4625 0    50   ~ 0
+V_S_O
+Wire Bus Line
+	5850 10675 5725 10675
+Wire Bus Line
+	5900 10675 6025 10675
+Text Label 10700 3425 2    50   ~ 0
+V_S_I
+Wire Wire Line
+	10700 3425 10750 3425
+Wire Wire Line
+	10750 3425 10750 3625
+Text Label 6925 9375 2    50   ~ 0
+V_S_I
+Wire Wire Line
+	6925 9375 7000 9375
+Wire Wire Line
+	7000 9375 7000 9400
+Text Notes 6300 10875 0    50   ~ 0
+Resistive voltage sensor using potenial divider\nconnected to battery source. \nInput (V_S_I) conn to VIN terminals\nOutput (V_S_O) conn to A0 of MC
+NoConn ~ 10350 4725
+NoConn ~ 10350 4825
+NoConn ~ 11350 4225
+NoConn ~ 11350 4425
+Text Label 5575 4625 2    50   ~ 0
+I2C_SCL
+Text Label 5600 5850 2    50   ~ 0
+I2C_SDA
+Text Label 11350 5025 0    50   ~ 0
+I2C_SDA
+Text Label 11350 5125 0    50   ~ 0
+I2C_SCL
+Text Notes 6100 6275 0    50   ~ 0
+Had to connect I2C_SCL and I2C_SDA \nlike this to avoid no connect errors!
+Entry Wire Line
+	5750 4825 5850 4925
+Wire Wire Line
+	4675 4825 5575 4825
+Wire Wire Line
+	5600 5850 5600 6000
+Wire Wire Line
+	4775 6000 5600 6000
+Connection ~ 5600 6000
+Wire Wire Line
+	5575 4625 5575 4825
+Connection ~ 5575 4825
+Wire Wire Line
+	5575 4825 5750 4825
+NoConn ~ 10850 7350
+NoConn ~ 10850 7650
+Text Notes 5725 4525 0    50   ~ 0
+SCL SDA
+Wire Bus Line
+	5850 4550 5750 4550
+Wire Bus Line
+	5900 4550 6000 4550
+$Comp
+L NTX2:NTX2 U1
+U 1 1 5E8F8691
+P 8025 4650
+F 0 "U1" H 8025 4650 50  0001 L BNN
+F 1 "NTX2" H 8025 4650 50  0001 L BNN
+F 2 "NTX2:NTX2" H 8025 4650 50  0001 L BNN
+F 3 "" H 8025 4650 50  0001 C CNN
+	1    8025 4650
+	1    0    0    -1  
+$EndComp
+Text Notes 6025 5075 0    50   ~ 0
+50 Ohm SMA edge\nmounted antenna \nconnector for \n164mm 1/4 wave \npigtail
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5EED2E18
+P 9925 5325
+F 0 "BZ1" H 9825 5325 50  0000 C CNN
+F 1 "Buzzer" H 9950 5175 50  0000 C CNN
+F 2 "NTX2:5V_Buzzer" V 9900 5425 50  0001 C CNN
+F 3 "~" V 9900 5425 50  0001 C CNN
+	1    9925 5325
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5EEF331B
+P 10075 5475
+F 0 "#PWR015" H 10075 5225 50  0001 C CNN
+F 1 "GND" H 10080 5302 50  0000 C CNN
+F 2 "" H 10075 5475 50  0001 C CNN
+F 3 "" H 10075 5475 50  0001 C CNN
+	1    10075 5475
+	1    0    0    -1  
+$EndComp
+Text GLabel 9525 5500 1    50   Input ~ 0
+5V
+Text GLabel 8375 5500 3    50   Input ~ 0
+5V
+$Comp
+L MCU_Module:Arduino_UNO_R3 A1
+U 1 1 5E8F8079
+P 10850 4625
+F 0 "A1" H 10500 5575 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 11350 3525 50  0000 C CNN
+F 2 "NTX2:Arduino_UNO_R3_(Headers_Version)" H 11000 3575 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 10650 5675 50  0001 C CNN
+	1    10850 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4325 9600 4100
+Wire Wire Line
+	9825 4100 9825 4225
+Wire Wire Line
+	9825 3750 9825 3800
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5EA38149
+P 10075 2725
+F 0 "J2" V 10041 2537 50  0000 R CNN
+F 1 "Conn_01x02" V 10175 2925 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10075 2725 50  0001 C CNN
+F 3 "~" H 10075 2725 50  0001 C CNN
+	1    10075 2725
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	10325 4025 10350 4025
+Wire Wire Line
+	10225 4125 10350 4125
+Wire Wire Line
+	9600 4325 10350 4325
+Wire Wire Line
+	9825 4225 10350 4225
+Text Notes 9175 2900 0    50   ~ 0
+UART Connections\n
+$Comp
+L NTX2:SMA_5pin U7
+U 1 1 5E99D95F
+P 7075 5800
+F 0 "U7" V 7000 5525 50  0000 L CNN
+F 1 "SMA_5pin" V 7075 6000 50  0000 L CNN
+F 2 "NTX2:SMA_EDGE" H 7125 6100 50  0001 C CNN
+F 3 "" H 7875 6300 50  0001 C CNN
+	1    7075 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6875 5450 6975 5450
+Connection ~ 6975 5450
+Wire Wire Line
+	6975 5450 7075 5450
+Connection ~ 7075 5450
+Wire Wire Line
+	7075 5450 7175 5450
+Connection ~ 7175 5450
+Wire Wire Line
+	7175 5450 7275 5450
+Wire Wire Line
+	7275 5300 7275 5325
+Wire Wire Line
+	7275 5400 7175 5400
+Wire Wire Line
+	7175 5400 7175 5450
+Wire Wire Line
+	6875 5300 6875 5375
+Wire Wire Line
+	6875 5375 6975 5375
+Wire Wire Line
+	6975 5375 6975 5450
+Wire Wire Line
+	7075 5300 7075 5350
+Wire Wire Line
+	7075 5350 7325 5350
+Wire Wire Line
+	7325 5350 7325 5650
+Wire Wire Line
+	7325 5800 7275 5800
+$Comp
+L Device:R R7
+U 1 1 5E8F953D
+P 9325 5800
+F 0 "R7" V 9175 5750 50  0000 L CNN
+F 1 "47k" V 9250 5725 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9255 5800 50  0001 C CNN
+F 3 "~" H 9325 5800 50  0001 C CNN
+	1    9325 5800
+	0    1    1    0   
+$EndComp
+Text Notes 8050 6225 0    50   ~ 0
+The fixed 10K ensures atleast 10K of resistance minimum.\nThe pot will allow tuning of the frequency shift
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E9FA49A
+P 7275 5325
+F 0 "#FLG0101" H 7275 5400 50  0001 C CNN
+F 1 "PWR_FLAG" V 7275 5453 50  0000 L CNN
+F 2 "" H 7275 5325 50  0001 C CNN
+F 3 "~" H 7275 5325 50  0001 C CNN
+	1    7275 5325
+	0    1    1    0   
+$EndComp
+Connection ~ 7275 5325
+Wire Wire Line
+	7275 5325 7275 5400
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E9FA686
+P 7325 5650
+F 0 "#FLG0102" H 7325 5725 50  0001 C CNN
+F 1 "PWR_FLAG" V 7325 5778 50  0000 L CNN
+F 2 "" H 7325 5650 50  0001 C CNN
+F 3 "~" H 7325 5650 50  0001 C CNN
+	1    7325 5650
+	0    1    1    0   
+$EndComp
+Connection ~ 7325 5650
+Wire Wire Line
+	7325 5650 7325 5800
+Text Notes 11675 6625 0    50   ~ 0
+When configured as a pass through you\nneed a voltage divider between arduino RX\nand ublox RX to convert the 5v arduino logic\nto 3.3V. Set R1=1K and R2=2
+$Comp
+L FQP47P06:FQP47P06 Q1
+U 1 1 5EA23519
+P 10450 2625
+F 0 "Q1" H 10879 2771 50  0000 L CNN
+F 1 "FQP47P06" H 10879 2680 50  0000 L CNN
+F 2 "NTX2:TO254P483X1016X2261-3P" H 10900 2575 50  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FQP47P06-D.pdf" H 10900 2475 50  0001 L CNN
+F 4 "Trans MOSFET P-CH 60V 47A 3-Pin TO-220" H 10900 2375 50  0001 L CNN "Description"
+F 5 "4.83" H 10900 2275 50  0001 L CNN "Height"
+F 6 "ON Semiconductor" H 10900 2175 50  0001 L CNN "Manufacturer_Name"
+F 7 "FQP47P06" H 10900 2075 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "512-FQP47P06" H 10900 1975 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=512-FQP47P06" H 10900 1875 50  0001 L CNN "Mouser Price/Stock"
+F 10 "6715127P" H 10900 1775 50  0001 L CNN "RS Part Number"
+F 11 "http://uk.rs-online.com/web/p/products/6715127P" H 10900 1675 50  0001 L CNN "RS Price/Stock"
+	1    10450 2625
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EA3F48A
+P 10850 2425
+F 0 "#PWR017" H 10850 2175 50  0001 C CNN
+F 1 "GND" H 10900 2275 50  0000 C CNN
+F 2 "" H 10850 2425 50  0001 C CNN
+F 3 "" H 10850 2425 50  0001 C CNN
+	1    10850 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5EA77790
+P 10375 2675
+F 0 "#PWR016" H 10375 2425 50  0001 C CNN
+F 1 "GND" H 10380 2502 50  0000 C CNN
+F 2 "" H 10375 2675 50  0001 C CNN
+F 3 "" H 10375 2675 50  0001 C CNN
+	1    10375 2675
+	1    0    0    -1  
+$EndComp
+Text Notes 9675 2525 0    50   ~ 0
+Reverse voltage protection\nusing p-channel mosfet\n
+Wire Wire Line
+	10375 2675 10375 2625
+Wire Wire Line
+	10375 2625 10450 2625
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5EABFF5D
+P 10750 3200
+F 0 "#FLG0103" H 10750 3275 50  0001 C CNN
+F 1 "PWR_FLAG" V 10750 3328 50  0000 L CNN
+F 2 "" H 10750 3200 50  0001 C CNN
+F 3 "~" H 10750 3200 50  0001 C CNN
+	1    10750 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10750 2125 10750 2150
+Wire Wire Line
+	10850 2125 10850 2400
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5EAE87E8
+P 10850 2400
+F 0 "#FLG0104" H 10850 2475 50  0001 C CNN
+F 1 "PWR_FLAG" V 10850 2528 50  0000 L CNN
+F 2 "" H 10850 2400 50  0001 C CNN
+F 3 "~" H 10850 2400 50  0001 C CNN
+	1    10850 2400
+	0    1    1    0   
+$EndComp
+Connection ~ 10850 2400
+$Comp
+L Device:Fuse_Small F1
+U 1 1 5E9D748E
+P 10750 2250
+F 0 "F1" V 10675 2125 50  0000 L CNN
+F 1 "500mA Fuse" V 10750 2375 50  0000 L CNN
+F 2 "NTX2:MC000827" H 10750 2250 50  0001 C CNN
+F 3 "~" H 10750 2250 50  0001 C CNN
+	1    10750 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10850 2400 10850 2425
+Wire Wire Line
+	10750 2350 10750 2425
+Text Notes 9200 2350 0    50   ~ 0
+Precautionary fuse to prevent excess \ncurrent draw from damaging circuit\n
+Connection ~ 10750 3425
+Wire Wire Line
+	10750 3200 10750 3425
+Connection ~ 10750 3200
+Wire Wire Line
+	10750 3025 10750 3200
+$Comp
+L Device:R R1
+U 1 1 5E9FC6AB
+P 9975 5025
+F 0 "R1" V 9900 4975 50  0000 L CNN
+F 1 "150R" V 10075 4925 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9905 5025 50  0001 C CNN
+F 3 "~" H 9975 5025 50  0001 C CNN
+	1    9975 5025
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5EA024F7
+P 9675 5200
+F 0 "D3" V 9575 5200 50  0000 L CNN
+F 1 "GPS_LOCK" V 9900 5050 50  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9675 5200 50  0001 C CNN
+F 3 "~" H 9675 5200 50  0001 C CNN
+	1    9675 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5EA0E79C
+P 9675 5400
+F 0 "#PWR018" H 9675 5150 50  0001 C CNN
+F 1 "GND" H 9680 5227 50  0000 C CNN
+F 2 "" H 9675 5400 50  0001 C CNN
+F 3 "" H 9675 5400 50  0001 C CNN
+	1    9675 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9675 5400 9675 5350
+Wire Wire Line
+	9675 5050 9675 5025
+$Comp
+L Transistor_FET:BSS138 Q9
+U 1 1 5EACF709
+P 14000 6900
+F 0 "Q9" V 14250 6900 50  0000 C CNN
+F 1 "BSS138" V 14341 6900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14200 6825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 14000 6900 50  0001 L CNN
+	1    14000 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EACF710
+P 13700 6750
+F 0 "R3" H 13770 6796 50  0000 L CNN
+F 1 "10K" H 13770 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13630 6750 50  0001 C CNN
+F 3 "~" H 13700 6750 50  0001 C CNN
+	1    13700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 5EACF717
+P 14300 6750
+F 0 "R24" H 14370 6796 50  0000 L CNN
+F 1 "10K" H 14370 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 14230 6750 50  0001 C CNN
+F 3 "~" H 14300 6750 50  0001 C CNN
+	1    14300 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13800 7000 13700 7000
+Wire Wire Line
+	13700 6900 13700 7000
+Wire Wire Line
+	14200 7000 14300 7000
+Wire Wire Line
+	14300 6900 14300 7000
+Connection ~ 13700 7000
+Wire Wire Line
+	13500 7000 13700 7000
+Wire Wire Line
+	13700 6600 13700 6500
+Wire Wire Line
+	14000 6700 14000 6500
+Wire Wire Line
+	14000 6500 13700 6500
+Connection ~ 13700 6500
+Wire Wire Line
+	13700 6500 13700 6400
+Text GLabel 13700 6400 1    50   Input ~ 0
+3V3
+Text GLabel 14300 6350 1    50   Input ~ 0
+5V
+Wire Wire Line
+	14300 6350 14300 6600
+Text GLabel 13500 7000 0    50   BiDi ~ 0
+Ublox_TXD_3V3
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5EACF72D
+P 13975 8025
+F 0 "Q2" V 14225 8025 50  0000 C CNN
+F 1 "BSS138" V 14316 8025 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14175 7950 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 13975 8025 50  0001 L CNN
+	1    13975 8025
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5EACF734
+P 13675 7875
+F 0 "R2" H 13745 7921 50  0000 L CNN
+F 1 "10K" H 13745 7830 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13605 7875 50  0001 C CNN
+F 3 "~" H 13675 7875 50  0001 C CNN
+	1    13675 7875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EACF73B
+P 14275 7875
+F 0 "R4" H 14345 7921 50  0000 L CNN
+F 1 "10K" H 14345 7830 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 14205 7875 50  0001 C CNN
+F 3 "~" H 14275 7875 50  0001 C CNN
+	1    14275 7875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13775 8125 13675 8125
+Wire Wire Line
+	13675 8025 13675 8125
+Wire Wire Line
+	14175 8125 14275 8125
+Wire Wire Line
+	14275 8025 14275 8125
+Connection ~ 13675 8125
+Wire Wire Line
+	13475 8125 13675 8125
+Wire Wire Line
+	13675 7725 13675 7625
+Wire Wire Line
+	13975 7825 13975 7625
+Wire Wire Line
+	13975 7625 13675 7625
+Connection ~ 13675 7625
+Wire Wire Line
+	13675 7625 13675 7525
+Text GLabel 13675 7525 1    50   Input ~ 0
+3V3
+Text GLabel 14275 7475 1    50   Input ~ 0
+5V
+Wire Wire Line
+	14275 7475 14275 7725
+Text GLabel 13475 8125 0    50   BiDi ~ 0
+Ublox_RXD_3V3
+Text Notes 14450 7450 0    50   ~ 0
+MPU9250 SDA Shifter
+Text GLabel 14500 7000 2    50   BiDi ~ 0
+Ublox_TXD_5V
+Wire Wire Line
+	14500 7000 14300 7000
+Connection ~ 14300 7000
+Text GLabel 14475 8125 2    50   BiDi ~ 0
+Ublox_RXD_5V
+Wire Wire Line
+	14475 8125 14275 8125
+Connection ~ 14275 8125
+Text GLabel 11300 6900 1    50   BiDi ~ 0
+Ublox_TXD_3V3
+Text GLabel 11500 6900 1    50   BiDi ~ 0
+Ublox_RXD_3V3
+Wire Wire Line
+	10225 3075 9975 3075
+Wire Wire Line
+	10225 3075 10225 4125
+Wire Wire Line
+	10325 2975 10075 2975
+Wire Wire Line
+	10325 2975 10325 4025
+Text GLabel 9800 2975 0    50   BiDi ~ 0
+Ublox_TXD_5V
+Text GLabel 9800 3075 0    50   BiDi ~ 0
+Ublox_RXD_5V
+Wire Wire Line
+	10075 2925 10075 2975
+Connection ~ 10075 2975
+Wire Wire Line
+	10075 2975 9800 2975
+Wire Wire Line
+	9975 2925 9975 3075
+Connection ~ 9975 3075
+Wire Wire Line
+	9975 3075 9800 3075
+Wire Wire Line
+	10075 5475 10075 5425
+Wire Wire Line
+	10075 5425 10025 5425
+Wire Wire Line
+	10025 5225 10275 5225
+Wire Wire Line
+	9475 5800 10250 5800
+Wire Wire Line
+	10125 5025 10350 5025
+NoConn ~ 10350 4625
+NoConn ~ 10350 4925
+Text Notes 11600 4850 0    50   ~ 0
+!UV 3V3 Reference!
+Text Label 12300 5375 2    50   ~ 0
+UM232R_RXD
+Text Label 10350 4425 2    50   ~ 0
+UM232R_RXD
+Text Label 10350 4525 2    50   ~ 0
+UM232R_TXD
+Text Label 12300 5275 2    50   ~ 0
+UM232R_TXD
+$Comp
+L power:GND #PWR019
+U 1 1 5EB468FF
+P 12200 5550
+F 0 "#PWR019" H 12200 5300 50  0001 C CNN
+F 1 "GND" H 12205 5377 50  0000 C CNN
+F 2 "" H 12200 5550 50  0001 C CNN
+F 3 "" H 12200 5550 50  0001 C CNN
+	1    12200 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5EB93592
+P 10750 1925
+F 0 "J1" V 10750 1675 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" V 10750 2000 50  0000 L CNN
+F 2 "NTX2:2_Pin_Screw_Terminal" H 10750 1925 50  0001 C CNN
+F 3 "~" H 10750 1925 50  0001 C CNN
+	1    10750 1925
+	0    -1   -1   0   
+$EndComp
+Text GLabel 12150 3950 0    50   Input ~ 0
+5V
+Text Label 11350 4925 0    50   ~ 0
+Thermistor
+Text Label 11925 4050 2    50   ~ 0
+Thermistor
+Text Notes 12425 4375 0    50   ~ 0
+Thermistor connector for\nexternal temperature sensor\n(with voltage 1:1 divider)
+$Comp
+L power:GND #PWR020
+U 1 1 5EBE7C7C
+P 12025 4400
+F 0 "#PWR020" H 12025 4150 50  0001 C CNN
+F 1 "GND" H 12030 4227 50  0000 C CNN
+F 2 "" H 12025 4400 50  0001 C CNN
+F 3 "" H 12025 4400 50  0001 C CNN
+	1    12025 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 5EC0181D
+P 12025 4250
+F 0 "R25" H 12095 4296 50  0000 L CNN
+F 1 "100k" H 12095 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11955 4250 50  0001 C CNN
+F 3 "~" H 12025 4250 50  0001 C CNN
+	1    12025 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12025 4100 12025 4050
+Wire Wire Line
+	12025 4050 12150 4050
+Wire Wire Line
+	12025 4050 11925 4050
+Connection ~ 12025 4050
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5EC76C9F
+P 12350 3950
+F 0 "J3" H 12430 3942 50  0000 L CNN
+F 1 "Conn_01x02" H 12430 3851 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 12350 3950 50  0001 C CNN
+F 3 "~" H 12350 3950 50  0001 C CNN
+	1    12350 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 11350 4825 2    50   Input ~ 0
+3V3
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J4
+U 1 1 5EC999C8
+P 14100 4650
+F 0 "J4" H 14150 4850 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 13975 4925 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 14100 4650 50  0001 C CNN
+F 3 "~" H 14100 4650 50  0001 C CNN
+	1    14100 4650
+	1    0    0    -1  
+$EndComp
+Text Label 13900 4550 2    50   ~ 0
+MISO
+Text Label 13900 4650 2    50   ~ 0
+SCK
+Text Label 13900 4750 2    50   ~ 0
+RST
+$Comp
+L power:+5V #PWR021
+U 1 1 5ECA2814
+P 14425 4400
+F 0 "#PWR021" H 14425 4250 50  0001 C CNN
+F 1 "+5V" H 14440 4573 50  0000 C CNN
+F 2 "" H 14425 4400 50  0001 C CNN
+F 3 "" H 14425 4400 50  0001 C CNN
+	1    14425 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14425 4400 14425 4475
+Wire Wire Line
+	14425 4550 14400 4550
+Text Label 14400 4650 0    50   ~ 0
+MOSI
+$Comp
+L power:GND #PWR022
+U 1 1 5ECAB329
+P 14450 4775
+F 0 "#PWR022" H 14450 4525 50  0001 C CNN
+F 1 "GND" H 14455 4602 50  0000 C CNN
+F 2 "" H 14450 4775 50  0001 C CNN
+F 3 "" H 14450 4775 50  0001 C CNN
+	1    14450 4775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14450 4775 14450 4750
+Wire Wire Line
+	14450 4750 14400 4750
+Wire Wire Line
+	9525 5500 9525 5550
+Wire Wire Line
+	9525 5550 9475 5550
+Wire Wire Line
+	9675 5025 9825 5025
+Wire Wire Line
+	10250 5800 10250 5450
+Wire Wire Line
+	10250 5325 10350 5325
+Text Label 10275 5175 2    50   ~ 0
+MISO
+Wire Wire Line
+	10275 5175 10275 5225
+Connection ~ 10275 5225
+Wire Wire Line
+	10275 5225 10350 5225
+Text Label 10300 5450 0    50   ~ 0
+SCK
+Connection ~ 10250 5450
+Wire Wire Line
+	10250 5450 10250 5325
+Wire Wire Line
+	10250 5450 10300 5450
+Wire Wire Line
+	10350 5125 10275 5125
+Wire Wire Line
+	10275 5125 10275 4900
+Wire Wire Line
+	10275 4900 10250 4900
+Text Label 10250 4900 2    50   ~ 0
+MOSI
+Text Notes 14050 5200 0    50   ~ 0
+ICSP Header for programming arduino\n(original blocked by tracker sheild)
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5ED6A393
+P 14425 4475
+F 0 "#FLG0105" H 14425 4550 50  0001 C CNN
+F 1 "PWR_FLAG" V 14425 4603 50  0000 L CNN
+F 2 "" H 14425 4475 50  0001 C CNN
+F 3 "~" H 14425 4475 50  0001 C CNN
+	1    14425 4475
+	0    1    1    0   
+$EndComp
+Connection ~ 14425 4475
+Wire Wire Line
+	14425 4475 14425 4550
+Text Label 11350 4025 0    50   ~ 0
+RST
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5ED757C5
+P 5425 6700
+F 0 "J5" H 5425 6500 50  0000 C CNN
+F 1 "Conn_01x02" H 5425 6825 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 5425 6700 50  0001 C CNN
+F 3 "~" H 5425 6700 50  0001 C CNN
+	1    5425 6700
+	-1   0    0    1   
+$EndComp
+Text Notes 5950 6775 0    50   ~ 0
+Tap into \nI2C lines\n(no pullups)
+Wire Wire Line
+	5625 6600 5725 6600
+Wire Wire Line
+	5625 6700 5725 6700
+Wire Wire Line
+	5725 6700 5725 7075
+Connection ~ 5725 7075
+Wire Wire Line
+	5725 7075 4750 7075
+Wire Wire Line
+	5725 6600 5725 6000
+Wire Wire Line
+	5600 6000 5725 6000
+Connection ~ 5725 6000
+Wire Wire Line
+	5725 6000 5800 6000
+$Comp
+L Connector_Generic:Conn_01x03 J6
+U 1 1 5EE3A426
+P 12500 5375
+F 0 "J6" H 12580 5417 50  0000 L CNN
+F 1 "Conn_01x03" H 12580 5326 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 12500 5375 50  0001 C CNN
+F 3 "~" H 12500 5375 50  0001 C CNN
+	1    12500 5375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12200 5475 12300 5475
+Wire Wire Line
+	12200 5475 12200 5550
+Wire Bus Line
+	5900 4550 5900 10675
+Wire Bus Line
+	5850 4550 5850 10675
+$EndSCHEMATC

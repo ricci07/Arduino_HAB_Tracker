@@ -1,0 +1,2 @@
+src:
+httpsgithub.comLNSDArduino-Shield-TemplateblamemasterArduino%20UNO%20R3%20shield%20-%20full.dxf
